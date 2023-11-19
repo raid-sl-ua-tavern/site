@@ -6,6 +6,6 @@
   background-repeat: no-repeat;
 }
 
-body .container {
+.container {
   background-image: url(../img/background.jpg);
 }
