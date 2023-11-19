@@ -5,3 +5,7 @@
   background-image: url(../img/header.jpg);
   background-repeat: no-repeat;
 }
+
+body .container {
+  background-image: url(../img/background.jpg);
+}
