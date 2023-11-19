@@ -10,3 +10,7 @@ $basa: 20px;
     background-repeat: no-repeat;
     
 }
+
+.container:nth-child(odd) {
+    background-image: url(../img/background.jpg);
+}
