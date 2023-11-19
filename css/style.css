@@ -2,10 +2,26 @@
 @import url(../css/skeleton.css);
 @import url(../css/custom.css);
 .section {
-  background-image: url(../img/header.jpg);
+  background-image: url(../img/raid.jpg);
   background-repeat: no-repeat;
+  position: relative;
+  color: black;
+  font-weight: 400;
+  text-shadow: 5px 5px 20px 20px black;
 }
 
-.container {
-  background-image: url(../img/background.jpg);
+.logo {
+  text-decoration: underline;
+  color: white;
+  padding-left: 17%;
+}
+
+img {
+  width: 80%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.action {
+  background-color: rgba(255, 255, 255, 0.7);
 }
