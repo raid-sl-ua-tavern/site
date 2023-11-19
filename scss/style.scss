@@ -11,6 +11,6 @@ $basa: 20px;
     
 }
 
-.container:first-child {
+body .container:nth-child(2) {
     background-image: url(../img/background.jpg);
 }
