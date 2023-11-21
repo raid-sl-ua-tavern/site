@@ -1,33 +1,199 @@
+// Імпорти стилів
 @import url(../css/normalize.css);
-@import url(../css/skeleton.css);
-@import url(../css/custom.css);
 
+// Перемінні
 $basa: 20px;
 
 
-.section{
+
+
+// стилі
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+// верх
+header {
+    text-align: center;
+    flex: 0 0 auto;
+    background-image: url(../img/winter.jpg);
+    background-repeat: repeat;
     
-    background-image: url(../img/raid.jpg);
-    background-repeat: no-repeat;
-    position: relative;
-    color: black;
-    font-weight: 400;
-    text-shadow: 5px 5px 20px 20px rgba($color: #000000, $alpha: 1.0);
+   
 }
 
-.logo{
-    text-decoration: underline;
+footer {
+    flex: 0 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    min-height: 15vh;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    
+
+    div {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .logo {
+
+        flex: 0 1 200px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        img {
+        height: 80%;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        
+        }
+
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+
+
+        ul {
+            display: flex;
+            gap: 20px
+    }
+    
+
+    }
+            
+    li {
+        background-color: rgb(0, 255, 119);
+        border-radius: 10%;
+        width: 150px;
+        overflow: hidden;
+        box-shadow: 3px 3px 3px rgb(7, 37, 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.3s 0s linear;
+        
+
+        a {
+            display: block;
+            padding: 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-wrap: nowrap;
+
+        }
+        
+    }
+
+.now{
+        background-color: rgb(0, 217, 255);
+        color: white;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+        box-shadow: 3px 3px 3px rgb(11, 37, 56);
+        font-weight: bold;
+
+    }
+
+.now:hover {
+        background-color: rgb(0, 217, 255);
+    }
+
+
+li:hover { 
+        background-color: rgb(4, 165, 47);
+    }
+
+}
+
+a {
     color: white;
-    padding-left: 17%;
+}
+
+a:active {
+    color: red;
+    text-decoration: underline;
+}
+
+// основне
+
+
+main {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 74vh;
+    align-items: center;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+        object-fit: cover;  
+        flex: 1 1 auto;
+            
+        }
+
+    .content {
+        position: relative;
+        align-self: center;
+        display: flex;
+        z-index: 2;
+        flex-direction: column;
+        background-color: rgba($color: #ffffff, $alpha: 0.6);
+        flex: 1 1 auto;
+        justify-content: center;
+
+        padding: 10px 25px 30px 25px;
+        width: 1020px;
+        gap: 20px;
+        
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        
+    }
+    p {
+        font-size: 1.5rem; 
+        font-weight: 500;
+        line-height: 135%;
+        letter-spacing: 0.1rem;
+        
+    }
+            }
+}
+    
+
+
+
+
+// низ
+.footer {
+    display: flex;
+    height: 100px;
+    background-color: rgb(47, 47, 42);
+    min-height: 11vh;
+
+    .copyright {
+        color: white;
+    }
 
 }
 
-img {
-    width: 80%;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.action {
-    background-color: rgba($color: #ffffff, $alpha: 0.7);
-}

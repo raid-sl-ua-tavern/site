@@ -1,27 +1,144 @@
 @import url(../css/normalize.css);
-@import url(../css/skeleton.css);
-@import url(../css/custom.css);
-.section {
-  background-image: url(../img/raid.jpg);
-  background-repeat: no-repeat;
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  flex: 0 0 auto;
+  background-image: url(../img/winter.jpg);
+  background-repeat: repeat;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  min-height: 15vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header div {
+  padding: 10px;
+  margin: 10px;
+}
+.header .logo {
+  flex: 0 1 200px;
   position: relative;
-  color: black;
-  font-weight: 400;
-  text-shadow: 5px 5px 20px 20px black;
+  display: flex;
+  justify-content: center;
 }
-
-.logo {
-  text-decoration: underline;
-  color: white;
-  padding-left: 17%;
-}
-
-img {
-  width: 80%;
+.header .logo img {
+  height: 80%;
   border-radius: 50%;
   overflow: hidden;
+  position: absolute;
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+.header .menu ul {
+  display: flex;
+  gap: 20px;
+}
+.header li {
+  background-color: rgb(0, 255, 119);
+  border-radius: 10%;
+  width: 150px;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px rgb(7, 37, 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s 0s linear;
+}
+.header li a {
+  display: block;
+  padding: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+.header .now {
+  background-color: rgb(0, 217, 255);
+  color: white;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  box-shadow: 3px 3px 3px rgb(11, 37, 56);
+  font-weight: bold;
+}
+.header .now:hover {
+  background-color: rgb(0, 217, 255);
+}
+.header li:hover {
+  background-color: rgb(4, 165, 47);
 }
 
-.action {
-  background-color: rgba(255, 255, 255, 0.7);
+a {
+  color: white;
+}
+
+a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+main {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 74vh;
+  align-items: center;
+}
+main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex: 1 1 auto;
+}
+main .content {
+  position: relative;
+  align-self: center;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.6);
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 10px 25px 30px 25px;
+  width: 1020px;
+  gap: 20px;
+}
+main .content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+main .content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 135%;
+  letter-spacing: 0.1rem;
+}
+
+.footer {
+  display: flex;
+  height: 100px;
+  background-color: rgb(47, 47, 42);
+  min-height: 11vh;
+}
+.footer .copyright {
+  color: white;
 }
