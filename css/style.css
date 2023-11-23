@@ -2,68 +2,103 @@
 .page {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 header {
-  text-align: center;
-  flex: 0 0 auto;
   background-image: url(../img/winter.jpg);
   background-repeat: repeat;
+  flex: 1 1 auto;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
 }
-
-footer {
-  flex: 0 0 auto;
-}
-
-.header {
+header .header {
   display: flex;
   justify-content: center;
-  min-height: 15vh;
+  align-items: center;
+  height: 70px;
+  flex: 1 1 auto;
   background-color: rgba(0, 0, 0, 0.3);
+  gap: 5%;
 }
-.header div {
-  padding: 10px;
-  margin: 10px;
-}
-.header .logo {
-  flex: 0 1 200px;
+header .header .logo {
   position: relative;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
 }
-.header .logo img {
-  height: 80%;
+header .header .logo a {
+  display: flex;
+}
+header .header .logo a .logo__image {
+  position: relative;
+  display: flex;
+  padding: 30px;
+}
+header .header .logo a .logo__image img {
+  position: absolute;
+  max-height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  position: absolute;
+  top: 0;
+  left: 0;
 }
-.header .menu {
+header .header .logo a .logo__caption {
+  position: relative;
+  display: flex;
+  padding: 10px;
+}
+header .header .logo a .logo__caption img {
+  position: absolute;
+  max-height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+header .header .logo a .logo__caption h2 {
+  font-size: 1.2rem;
+  color: blueviolet;
+  font-weight: 700;
+  text-wrap: nowrap;
+  padding: 10px;
+}
+header .header .menu {
   display: flex;
   align-items: center;
 }
-.header .menu ul {
+@media (max-width: 1080px) {
+  header .header .menu {
+    display: none;
+  }
+}
+header .header .menu ul {
   display: flex;
   gap: 20px;
 }
-.header li {
-  background-color: rgb(0, 255, 119);
-  border-radius: 10%;
+header .header .menu li {
+  background-color: rgb(167, 10, 246);
+  border-radius: 15px;
   width: 150px;
   overflow: hidden;
-  box-shadow: 3px 3px 3px rgb(7, 37, 2);
+  box-shadow: 3px 3px 3px rgb(37, 2, 26);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s 0s linear;
 }
-.header li a {
+header .header .menu li a {
   display: block;
-  padding: 20px;
+  flex: 1 1 auto;
+  padding: 15px;
   font-size: 1rem;
   text-transform: uppercase;
   text-wrap: nowrap;
+  text-align: center;
 }
-.header .now {
+header .header .menu .now {
   background-color: rgb(0, 217, 255);
   color: white;
   text-transform: uppercase;
@@ -71,20 +106,43 @@ footer {
   box-shadow: 3px 3px 3px rgb(11, 37, 56);
   font-weight: bold;
 }
-.header .now:hover {
+header .header .menu .now:hover {
   background-color: rgb(0, 217, 255);
 }
-.header li:hover {
-  background-color: rgb(4, 165, 47);
+header .header .menu li:hover {
+  background-color: rgb(62, 6, 92);
 }
-
-a {
+header .header .menu a {
   color: white;
 }
-
-a:active {
-  color: red;
-  text-decoration: underline;
+header .header .search .search__form {
+  display: flex;
+  gap: 10px;
+}
+header .header .search .search__form input.search {
+  padding: 10px;
+  border: 4px solid blueviolet;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  transition: all 0.3s 0s linear;
+}
+header .header .search .search__form input.search:focus {
+  border: 4px solid rgb(0, 217, 255);
+  padding: 12px 10px;
+}
+header .header .search .search__form .searched {
+  position: relative;
+  flex: 1 1 auto;
+}
+header .header .search .search__form .searched button.search img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s 0s linear;
+}
+header .header .search .search__form .searched button.search img:hover {
+  transform: scale(1.2);
 }
 
 main {
@@ -96,7 +154,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 74vh;
+  height: 900px;
   align-items: center;
 }
 main video {
@@ -115,9 +173,10 @@ main .content {
   display: flex;
   z-index: 2;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(40, 35, 35, 0.7);
   flex: 1 1 auto;
   justify-content: center;
+  color: white;
   padding: 10px 25px 30px 25px;
   width: 1020px;
   gap: 20px;
@@ -133,11 +192,31 @@ main .content p {
   letter-spacing: 0.1rem;
 }
 
+footer {
+  flex: 0 0 auto;
+}
+
 .footer {
   display: flex;
   height: 100px;
-  background-color: rgb(47, 47, 42);
-  min-height: 11vh;
+  background-color: rgb(62, 6, 92);
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.footer .telegram {
+  position: relative;
+  display: flex;
+  padding: 30px;
+}
+.footer img {
+  position: absolute;
+  max-height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
 }
 .footer .copyright {
   color: white;
