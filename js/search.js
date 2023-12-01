@@ -54,8 +54,9 @@ function showSuggestions(list){
     if(!list.length){
         userValue = inputBox.value;
         listData = `<li>${userValue}</li>`;
-    }else{
-      listData = list.join('');
     }
+    // else{
+    //   listData = list.join('');
+    // }
     suggBox.innerHTML = listData;
 }
