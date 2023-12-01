@@ -12,7 +12,7 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-            webLink = `https://raid-ua-tavern.vercel.app/${userData}`;
+            webLink = `#`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
         }
