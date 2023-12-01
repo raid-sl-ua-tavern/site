@@ -37,10 +37,12 @@ inputBox.onkeyup = (e)=>{
 }
 
 function select(element){
-    let selectData = element.textContent;
+    let selectData_default = element.textContent;
+    let selectData = selectData_default.toLowerCase();
     inputBox.value = selectData;
+    
     icon.onclick = ()=>{
-        webLink = `https://raid-ua-tavern.vercel.app/${selectData}.html`;
+        webLink = `https://raid-ua-tavern.vercel.app/${selectData}.html#`;
         linkTag.setAttribute("href", webLink);
         linkTag.click();
     }
